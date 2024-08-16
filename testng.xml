@@ -1,0 +1,64 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="getAssertionMessage"/>
+                </methods>
+            </class>
+            <class name="tests.AddToCartTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="getAssertionMessage"/>
+                    <include name="searchForProduct"/>
+                    <include name="getAssertionMessage"/>
+                    <include name="navigateToAddProductToCart"/>
+                    <include name="addProductToCart"/>
+                    <include name="navigateToCheckoutPage"/>
+                </methods>
+            </class>
+            <class name="tests.CheckOutTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="getAssertionMessage"/>
+                    <include name="searchForProduct"/>
+                    <include name="getAssertionMessage"/>
+                    <include name="navigateToAddProductToCart"/>
+                    <include name="addProductToCart"/>
+                    <include name="navigateToCheckoutPage"/>
+                    <include name="enterAddressInf"/>
+                    <include name="completeCheckout"/>
+                    <include name="placeOrder"/>
+                    <include name="assertThatOrderPlacedSuccessfully"/>
+                </methods>
+            </class>
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="searchForProduct"/>
+                    <include name="getAssertionMessage"/>
+                </methods>
+            </class>
+
+            <class name="tests.UpdateCartTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="getAssertionMessage"/>
+                    <include name="searchForProduct"/>
+                    <include name="getAssertionMessage"/>
+                    <include name="navigateToAddProductToCart"/>
+                    <include name="addProductToCart"/>
+                    <include name="navigateToCartPage"/>
+                    <include name="updateCartPage"/>
+                    <include name="removeItem"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
